@@ -153,7 +153,7 @@ class DjangoChoices(unittest.TestCase):
 
         message = "Select a valid choice. 4 is not " "one of the available choices."
 
-        self.assertRaisesRegexp(ValidationError, message, NumericTestClass.validator, 4)
+        self.assertRaisesRegex(ValidationError, message, NumericTestClass.validator, 4)
 
     def test_subclass1_validator(self):
         from django.core.exceptions import ValidationError
